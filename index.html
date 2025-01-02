@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Clothing Shop</h1>
+        <div id="cart-logo">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+    <main id="shop-page">
+        <section class="products">
+            <h2>Available Items</h2>
+            <div class="product" data-id="1" data-name="T-Shirt" data-price="20">
+                <h3>T-Shirt</h3>
+                <p>Price: $20</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2" data-name="Jeans" data-price="40">
+                <h3>Jeans</h3>
+                <p>Price: $40</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3" data-name="Jacket" data-price="60">
+                <h3>Jacket</h3>
+                <p>Price: $60</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+    <main id="cart-page" style="display: none;">
+        <section class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0</p>
+            <button id="purchase-btn">Purchase</button>
+            <button id="back-to-shop">Back to Shop</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
