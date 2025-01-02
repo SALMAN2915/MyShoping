@@ -1,47 +1,56 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to the Clothing Shop</h1>
-        <div id="cart-logo">
-            🛒 <span id="cart-count">0</span>
+        <div class="logo">My Shop</div>
+        <div class="cart">
+            <!-- Link to Cart page -->
+            <a href="cart.html">
+                <button id="cart-btn">
+                    Cart (<span id="cart-count">0</span>)
+                </button>
+            </a>
         </div>
     </header>
-    <main id="shop-page">
-        <section class="products">
-            <h2>Available Items</h2>
-            <div class="product" data-id="1" data-name="T-Shirt" data-price="20">
-                <h3>T-Shirt</h3>
-                <p>Price: $20</p>
-                <button class="add-to-cart">Add to Cart</button>
+
+    <main>
+        <section class="product-list">
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$20.00</p>
+                <button class="add-to-cart" data-name="Product 1" data-price="20.00">Add to Cart</button>
             </div>
-            <div class="product" data-id="2" data-name="Jeans" data-price="40">
-                <h3>Jeans</h3>
-                <p>Price: $40</p>
-                <button class="add-to-cart">Add to Cart</button>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$30.00</p>
+                <button class="add-to-cart" data-name="Product 2" data-price="30.00">Add to Cart</button>
             </div>
-            <div class="product" data-id="3" data-name="Jacket" data-price="60">
-                <h3>Jacket</h3>
-                <p>Price: $60</p>
-                <button class="add-to-cart">Add to Cart</button>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>$25.00</p>
+                <button class="add-to-cart" data-name="Product 3" data-price="25.00">Add to Cart</button>
             </div>
         </section>
     </main>
-    <main id="cart-page" style="display: none;">
-        <section class="cart">
-            <h2>Your Cart</h2>
-            <ul id="cart-items"></ul>
-            <p id="total-price">Total: $0</p>
-            <button id="purchase-btn">Purchase</button>
-            <button id="back-to-shop">Back to Shop</button>
-        </section>
-    </main>
+
+    <!-- Modal for Add to Cart -->
+    <div id="addToCartModal" class="modal">
+        <div class="modal-content">
+            <p>Item added to cart! Do you want to go to your cart or keep shopping?</p>
+            <button id="goToCartBtn">Go to Cart</button>
+            <button id="shopMoreBtn">Shop More</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
